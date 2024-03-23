@@ -1,16 +1,88 @@
 ---
-
+import { Icon } from 'astro-icon/components';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang='en'>
+      <head>
+            <meta charset='utf-8' />
+            <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+            <meta name='viewport' content='width=device-width' />
+            <meta name='generator' content={Astro.generator} />
+            <title>Edwards Presume | Architect</title>
+      </head>
+      <body class='bg-black text-white'>
+            <div class='p-8 mx-auto max-w-xl'>
+                  <header>
+                        <h1 class='text-2xl text-center font-bold'>
+                              Edwards Presume
+                        </h1>
+                  </header>
+
+                  <ul class='space-y-5 w-full mt-8'>
+                        <li>
+                              <a
+                                    target='_blank'
+                                    href='https://twitter.com/edwardspresume'>
+                                    <Icon name='mdi:twitter' />
+                                    <span>Twitter</span>
+                              </a>
+                        </li>
+
+                        <li>
+                              <a
+                                    target='_blank'
+                                    href='https://www.instagram.com/edwardspresume'>
+                                    <Icon name='mdi:instagram' />
+                                    <span>Instagram</span>
+                              </a>
+                        </li>
+
+                        <li>
+                              <a
+                                    target='_blank'
+                                    href='https://github.com/edwardspresume'>
+                                    <Icon name='mdi:github' />
+                                    <span>Github</span>
+                              </a>
+                        </li>
+
+                        <li>
+                              <a
+                                    target='_blank'
+                                    href='https://www.youtube.com/@edwardspresume'>
+                                    <Icon name='mdi:youtube' />
+                                    <span>YouTube</span>
+                              </a>
+                        </li>
+
+                        <li>
+                              <a
+                                    target='_blank'
+                                    href='https://www.linkedin.com/in/edwardspresume'>
+                                    <Icon name='mdi:linkedin' />
+                                    <span>Linkedin</span>
+                              </a>
+                        </li>
+                  </ul>
+            </div>
+      </body>
 </html>
+
+<style>
+      li a {
+            gap: 0.5rem;
+            display: flex;
+            padding: 0.5rem;
+            font-size: 1.4rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.5rem;
+            border: 1px solid white;
+            transition: all 0.4s ease-in-out;
+      }
+
+      a:hover {
+            color: black;
+            background-color: white;
+      }
+</style>
