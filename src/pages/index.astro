@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+import { Image } from 'astro:assets';
+import manSitting from '../assets/sitting_under_a_stary_night.jpg';
 ---
 
 <html lang='en'>
@@ -12,8 +15,17 @@ import { Icon } from 'astro-icon/components';
       </head>
       <body class='bg-black text-white'>
             <div class='p-8 mx-auto max-w-xl'>
-                  <header class='text-center grid gap-1'>
+                  <header class='text-center grid gap-2'>
+                        <Image
+                              src={manSitting}
+                              width='150'
+                              height='150'
+                              alt='A description of my image.'
+                              class={'rounded-full mx-auto aspect-square object-cover border-slate-800 border'}
+                        />
+
                         <h1 class='text-3xl font-bold'>Edwards Presume</h1>
+
                         <q class='text-gray-400'>
                               If one advances confidently in the direction of
                               his dreams, and endeavors to live the life which
