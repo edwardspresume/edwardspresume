@@ -3,6 +3,34 @@ import { Icon } from 'astro-icon/components';
 
 import { Image } from 'astro:assets';
 import manSitting from '../assets/sitting_under_a_stary_night.jpg';
+
+const links = [
+      {
+            name: 'Twitter',
+            url: 'https://twitter.com/edwardspresume',
+            icon: 'mdi:twitter',
+      },
+      {
+            name: 'Instagram',
+            url: 'https://www.instagram.com/edwardspresume',
+            icon: 'mdi:instagram',
+      },
+      {
+            name: 'Github',
+            url: 'https://github.com/edwardspresume',
+            icon: 'mdi:github',
+      },
+      {
+            name: 'Youtube',
+            url: 'https://www.youtube.com/@edwardspresume',
+            icon: 'mdi:youtube',
+      },
+      {
+            name: 'Linkedin',
+            url: 'https://www.linkedin.com/in/edwardspresume',
+            icon: 'mdi:linkedin',
+      },
+];
 ---
 
 <html lang='en'>
@@ -35,50 +63,20 @@ import manSitting from '../assets/sitting_under_a_stary_night.jpg';
                   </header>
 
                   <ul class='space-y-5 mt-8'>
-                        <li>
-                              <a
-                                    target='_blank'
-                                    href='https://twitter.com/edwardspresume'>
-                                    <Icon name='mdi:twitter' />
-                                    <span>Twitter</span>
-                              </a>
-                        </li>
-
-                        <li>
-                              <a
-                                    target='_blank'
-                                    href='https://www.instagram.com/edwardspresume'>
-                                    <Icon name='mdi:instagram' />
-                                    <span>Instagram</span>
-                              </a>
-                        </li>
-
-                        <li>
-                              <a
-                                    target='_blank'
-                                    href='https://github.com/edwardspresume'>
-                                    <Icon name='mdi:github' />
-                                    <span>Github</span>
-                              </a>
-                        </li>
-
-                        <li>
-                              <a
-                                    target='_blank'
-                                    href='https://www.youtube.com/@edwardspresume'>
-                                    <Icon name='mdi:youtube' />
-                                    <span>YouTube</span>
-                              </a>
-                        </li>
-
-                        <li>
-                              <a
-                                    target='_blank'
-                                    href='https://www.linkedin.com/in/edwardspresume'>
-                                    <Icon name='mdi:linkedin' />
-                                    <span>Linkedin</span>
-                              </a>
-                        </li>
+                        {
+                              links.map((link) => (
+                                    <li>
+                                          <a
+                                                href={link.url}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                class='gap-1 flex p-2 items-center rounded-md border justify-center sm:text-lg transition-colors hover:bg-white hover:text-black duration-300'>
+                                                <Icon name={link.icon} />
+                                                <span>{link.name}</span>
+                                          </a>
+                                    </li>
+                              ))
+                        }
                   </ul>
             </div>
       </body>
@@ -101,21 +99,5 @@ import manSitting from '../assets/sitting_under_a_stary_night.jpg';
 
                   background-image: url('../assets/mountain_big.jpg');
             }
-      }
-      li a {
-            gap: 0.5rem;
-            display: flex;
-            padding: 0.5rem;
-            font-size: 1.2rem;
-            justify-content: center;
-            align-items: center;
-            border-radius: 0.5rem;
-            border: 1px solid white;
-            transition: all 0.4s ease-in-out;
-      }
-
-      a:hover {
-            color: black;
-            background-color: white;
       }
 </style>
